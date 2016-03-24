@@ -1,4 +1,4 @@
-Date/Time, Temperature
+Date/Time, Test Result
 
 20/03/2016 06:55:11,PASS
 20/03/2016 08:59:20,PASS
