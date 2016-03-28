@@ -90,7 +90,7 @@ for data in combined_data:
 
 
 rendered_template = env.get_template('report.html').render(date_range = doc_test_str, num_tests_run = num_tests_run, num_pass = num_pass, num_fail = num_fail, num_fail_temp = num_fail_temp, \
-                                             num_fail_unknown = num_fail_unknown,temp_data = temp_data, pass_data = pass_data, fail_reason = fail_reason)
+                                             num_fail_unknown = num_fail_unknown, temp_data = temp_data, pass_data = pass_data, fail_reason = fail_reason)
 
 
 print(rendered_template)
