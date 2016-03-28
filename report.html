@@ -6,20 +6,20 @@
 <body>
     <h1>Test Report for Acme</h1>
     
-    <b> Test Results for {{ }} </b> 
+    <b> Test Results for {{ date_range }} </b> 
 
 
     <h2> Summary </h2>
 
-    <p> Number of Tests run: <b> {{ }} </b> </p>
+    <p> Number of Tests run: <b> {{ num_tests_run }} </b> </p>
     
-    <p> Number of Tests pass: <b> {{ }} </b> </p>
+    <p> Number of Tests pass: <b> {{ num_pass }} </b> </p>
 
-    <p> Number of Tests failed: <b> {{ }} </b> </p>
+    <p> Number of Tests failed: <b> {{ num_fail }} </b> </p>
 
-    <p> Number of Tests failed due to temperature: <b> {{ }} </b> </p>
+    <p> Number of Tests failed due to temperature: <b> {{ num_fail_temp }} </b> </p>
 
-    <p> Number of Unknown Failures: <b> {{ }} </b> </p>
+    <p> Number of Unknown Failures: <b> {{ num_fail_unknown }} </b> </p>
 
     <table border="1">
     <tr>
@@ -28,11 +28,13 @@
     <td> Failure Cause </td>
     </tr>
     
-    Add Jina logic here.
+    {% for data in temp_data %}
     <tr>
-    <td></td>
-    
+    <td>{{  data }}</td>
+    <td>{{  pass_data[loop.index0]  }}</td>
+    <td>{{  fail_reason[loop.index0]  }}</td>
     </tr>
+    {% endfor %}
     </table>
 
 

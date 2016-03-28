@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import numpy as np
 
 ## ! REPEAT ! Extract later
 
@@ -27,6 +27,7 @@ pass_result = extract_data("pass-fail.txt")
 #print(pass_result)
 
 combined_data = []
+
 
 for i in range(len(temperature)):
     combined_data.append([temperature[i][0], temperature[i][1], pass_result[i][1]])
@@ -69,8 +70,29 @@ num_fail_temp = str(len(temperature_fail))
 
 num_fail_unknown = str(total_fail - len(temperature_fail))
 
-rendered_template = env.get_template('report.html').render(date_range = doc_test_str, num_tests_run = num_tests_run, num_pass = num_pass, num_fail = num_fail, num_fail_temp = num_fail_temp, \
-                                             num_fail_unknown = num_fail_unknown)
 
+data_np = np.array(combined_data)
+
+temp_data = data_np[:,0]
+pass_data = data_np[:,2]
+
+fail_reason = []
+
+for data in combined_data:
+
+    if data[2] == "PASS":
+        fail_reason.append("")
+    else:
+        if data[0] in temperature_fail:
+            fail_reason.append("Failed due to temperature")
+        else:
+            fail_reason.append("Unknown Cause")
+
+
+rendered_template = env.get_template('report.html').render(date_range = doc_test_str, num_tests_run = num_tests_run, num_pass = num_pass, num_fail = num_fail, num_fail_temp = num_fail_temp, \
+                                             num_fail_unknown = num_fail_unknown,temp_data = temp_data, pass_data = pass_data, fail_reason = fail_reason)
+
+
+print(rendered_template)
 with open("auto_report.html", "w") as f:
     f.write(rendered_template)
