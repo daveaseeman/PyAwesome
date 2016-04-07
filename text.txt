@@ -1,0 +1,9 @@
+One ring to rule them all.
+
+ones ones one"s
+
+How does ones outer life change with the change of the inner life?
+
+ sed "s/ones/one's/" text.txt
+ 
+ 
