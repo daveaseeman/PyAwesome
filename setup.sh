@@ -10,3 +10,4 @@ sudo pip3 install jinja2
 
 
 sudo pip3 install numpy
+sudo apt-get install tree 
