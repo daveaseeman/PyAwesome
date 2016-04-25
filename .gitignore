@@ -63,3 +63,4 @@ target/
 .vagrant/
 
 *.docx
+md5.txt
