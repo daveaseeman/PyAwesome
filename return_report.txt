@@ -1,0 +1,16 @@
+=============
+Returns Report
+==============
+
+Widget A
+Units Returned: 2
+
+Widget B
+Units Returned: 2
+
+
+Widget E
+Units Returned: 15
+
+Garbage Value
+Units Returned: 15
