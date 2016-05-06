@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
-import filter_cpython2
+import filter_cpython3
 
-filter_cpython2.filter()
+filter_cpython3.filter()
