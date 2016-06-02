@@ -4,7 +4,7 @@ import os
 import multiprocessing
 import time
 
-rootdir = "C:\st\github\enron\maildir\lay-k"
+rootdir = "/enron/lay-k"
 
 emails = []
 t0 = time.process_time()
