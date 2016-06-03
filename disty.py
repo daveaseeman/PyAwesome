@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from distributed import Executor
-
+import os
 rootdir = "/enron/lay-k"
 
 def word_count(inputfile):
@@ -21,4 +21,4 @@ def get_word_count():
 
 executor = Executor('127.0.0.1:8786')
 
-print(executor.submit(get_word_count).result())
+print("Yo Dude! Total words be : ", executor.submit(get_word_count).result())
