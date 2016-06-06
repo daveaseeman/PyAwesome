@@ -11,3 +11,9 @@ sudo pip3 install jinja2
 
 sudo pip3 install numpy
 sudo apt-get install tree 
+
+cd /tmp
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh -b
+~/miniconda3/bin/conda install numba -y
