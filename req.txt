@@ -9,7 +9,6 @@ chardet==2.2.1
 click==6.6
 cloudpickle==0.2.1
 colorama==0.2.5
-command-not-found==0.3
 cycler==0.10.0
 dask==0.9.0
 deco==0.3
