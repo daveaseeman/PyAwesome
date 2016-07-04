@@ -1,10 +1,7 @@
-create_user.py
-shlex
 
 cron.py
 myssh
-walk
-ugly
+
 
 
 pdf, doc, excel

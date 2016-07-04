@@ -4,6 +4,7 @@
 
 #sudo apt-get install python3-dev libxml2-dev libxslt1-dev zlib1g-dev libfreetype6-dev libxft-dev cython tree -y
 
+sudo apt-get install tree -y
 
 cd /tmp
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
