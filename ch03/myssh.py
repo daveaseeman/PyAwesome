@@ -32,4 +32,4 @@ ssh.close()
 
 print("Architecture 1 = ", re.findall(b"Architecture:[ ]* ([\w]*)", arch1))
 
-print("Architecture 2 RPI = ", re.findall(b"Architecture:[ ]* ([)"\w]*, arch2))
+print("Architecture 2 RPI = ", re.findall(b"Architecture:[ ]* ([\w]*)", arch2))
