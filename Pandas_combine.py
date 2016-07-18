@@ -1,30 +1,37 @@
-#!/usr/bin/python3
+#!/home/vagrant/miniconda3/bin/python
 
 import pandas
 import re
+
+import matplotlib
+matplotlib.use('Agg') 
 import matplotlib.pyplot as plt
 
-a=pandas.read_excel("product.xls")
-a.dropna(how='all')
 
-a = a[pandas.notnull(a['Price'])]
+#import pdb
+#pdb.set_trace()
 
-a['Price in'].fillna('dollars', inplace = True)
+aa=pandas.read_excel("product.xls")
+aa.dropna(how='all')
 
-b = pandas.read_excel("currency.xls")
+aa = aa[pandas.notnull(aa['Price'])]
 
-b.dropna(inplace=True)
+aa['Price in'].fillna('dollars', inplace = True)
+
+bb = pandas.read_excel("currency.xls")
+
+bb.dropna(inplace=True)
 
 
-for index, row in a.iterrows():
+for index, row in aa.iterrows():
     if row['Price in'] == 'Pounds':
-       a.loc[index,'Price'] = row['Price'] * b['Pounds'][1]
+       aa.loc[index,'Price'] = row['Price'] * bb['Pounds'][1]
     if  row['Price in'] == 'Euros':
-       a.loc[index,'Price'] = row['Price'] * b['Euros'][1]
+       aa.loc[index,'Price'] = row['Price'] * bb['Euros'][1]
 
 c=pandas.read_csv('sales_data.csv')
 
-d=pandas.merge(a,c)
+d=pandas.merge(aa,c)
 
 with open("return_report.txt", "r") as f:
     returns = f.read()
@@ -41,14 +48,14 @@ for hh in h:
 
 
 for gg in g:
-    if any(a[a['Product Name'].str.contains(gg[0])]):
-        local_index = a[a['Product Name'].str.contains(gg[0])].index[0]
+    if any(aa[aa['Product Name'].str.contains(gg[0])]):
+        local_index = aa[aa['Product Name'].str.contains(gg[0])].index[0]
         #print("local_index = {}, gg = {} {}".format(local_index,gg[0],gg[1]))
-        a.loc[local_index, 'Returns'] = gg[1]
+        aa.loc[local_index, 'Returns'] = gg[1]
 
-a.fillna(0, inplace = True)
+aa.fillna(0, inplace = True)
 
-new_a = a[['Product Name','Price','Returns']]
+new_a = aa[['Product Name','Price','Returns']]
 
 new_a.set_index('Product Name', inplace=True)
 
@@ -62,4 +69,4 @@ new_a = new_a.astype(float)
 
 
 new_a.plot(kind='bar',figsize=(12, 8))
-plt.savefig("a.png",  dpi = (600))
+plt.savefig("aa.png",  dpi = (600))
