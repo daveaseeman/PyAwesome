@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-
+#!/home/vagrant/miniconda3/bin/python
 import PyPDF2
 
 # Open our file

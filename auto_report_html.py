@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/vagrant/miniconda3/bin/python
 import numpy as np
 
 ## ! REPEAT ! Extract later

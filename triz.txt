@@ -1,0 +1,102 @@
+Module SESA3002a; Aerospace Design
+James Scanlan; School of Engineering Sciences
+Concept design; TRIZ (TeoriyaResheniyaIzobreatatels
+kikhZadatch)
+1TRIZ 40 Design Principles
+(Adapted from Slides Developed by Darryl Mann, Crea
+x)
+Module SESA3002a; Aerospace Design
+James Scanlan; School of Engineering Sciences
+Concept design; TRIZ (TeoriyaResheniyaIzobreatatels
+kikhZadatch)
+2TRIZ Œ40 Principles
+1 Segmentation 21 Skipping 
+
+2 Taking out 
+22 Blessing in disguise 
+3 Local quality 23 Feedback 
+
+4 Asymmetry 24 Intermediary 
+
+5 Merging 
+25 Self-service 
+6 Universality 26 Copying 
+
+7 Russian dolls 27 Cheap short-lived objects 
+
+8 Anti-weight 28 Mechanics substitution 
+
+9 Preliminary anti-action 29 Pneumatics and hydraul
+ics 
+10 Preliminary action 30 Flexible shells and thin f
+ilms 
+11 Beforehand cushioning 31 Porous materials 
+
+12 Equipotentiality  32 Colour changes 
+
+13 "The other way round" 33 Homogeneity 
+
+14 Spheroidality -Curvature 34 Discarding and recov
+ering 
+15 Dynamics 
+35 Parameter changes 
+16 Partial or excessive actions 36 Phase transition
+s 
+17 Another dimension 37 Thermal expansion 
+
+18 Mechanical vibration 38 Strong oxidants 
+
+19 Periodic action 39 Inert atmosphere 
+
+20 Continuity of useful action 40 Composite materia
+ls 
+Module SESA3002a; Aerospace Design
+James Scanlan; School of Engineering Sciences
+Concept design; TRIZ (TeoriyaResheniyaIzobreatatels
+kikhZadatch)
+3Principle 1. Segmentation 
+A -Divide an object into independent parts
+Gator-grip socket spanner 
+Multi-pin connectors 
+Bubble-wrap 
+Have a range of different focal length lenses for a
+ camera 
+Multiple pistons in an internal combustion engine 
+Multi-enginedaircraft 
+Pocket-spring mattress 
+Stratification of different constituents inside a c
+hemical process vessel 
+B -Make an object easy to assemble or disassemble
+Rapid-release bicycle saddle/wheel/etc fasteners 
+Quick disconnect joints in plumbing and hydraulic sy
+stems 
+Single fastener V-band clamps on flange joints 
+Loose-leaf paper in a ring-binder 
+C -Increase the degree of fragmentation or segmenta
+tion
+Use of multiple control surfaces on aerodynamic struc
+tures 
+16 and 24 valve versus 8 valve internal combustion e
+ngines 
+Multi-blade cartridge razors 
+Multi-zone combustion systems 
+Build up a component from layers (e.g. stereo-lithogr
+aphy, welds, etc) 
+Module SESA3002a; Aerospace Design
+James Scanlan; School of Engineering Sciences
+Concept design; TRIZ (TeoriyaResheniyaIzobreatatels
+kikhZadatch)
+4Principle 2. Taking Out
+A -Separate an interfering part or property from an
+ object, or 
+single out the only necessary part (or property) of
+ an object
+Locate a noisy compressor outside the building where
+ the compressed air is 
+used 
+Use the sound of a barking dog, without the dog, as
+ a burglar alarm 
+Scarecrow 
+Non-smoking areas in restaurants or in railway carri
+ages
+Automation removes humans
