@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Acme Test Report</title>
+  </head>
+
+
+  <body>
+
+  <h1> Acme Test Report</h1>
+
+  </br>
+  
+  <h2> {{ test_ran_dates_str  }} </h2>
+  </br>
+
+  <p> Total Number of tests: <b>{{ total_tests}} </b> </p>
+  <p> Total Number of tests passed: <b>{{ test_passed}} </b> </p>
+  <p> Total Number of tests failed: <b>{{ test_failed}} </b> </p>
+  <p> Total Number of temperature failures: <b>{{ test_fail_temp}} </b> </p>
+  <p> Total Number of unknown failures: <b>{{ test_fail_unknown}} </b> </p>
+
+
+</br>
+</br>
+
+<table border = 1>
+<tr>
+
+    <td> Test date </td>
+    <td> Result </td>
+    <td> Failure Cause </td>
+
+</tr>
+
+
+
+   {% for date in date_array  %}
+   <tr>
+   <td> {{date}} </td>
+   <td> {{result_array[loop.index0] }} </td>
+   <td> {{failure_cause[loop.index0] }} </td>
+    </tr>   
+    {% endfor%}
+
+
+
+</table>
+  </body>
+</html>

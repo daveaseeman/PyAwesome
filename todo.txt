@@ -1,9 +1,5 @@
 
-myssh
-
-
-
-pdf, doc, excel
+clikc on web app
 
 
 parallel and districuted

@@ -54,9 +54,7 @@ print("unknown_fail: ", unknown_fail)
 
 
 
-from jinja2 import Environment, FileSystemLoader
 
-env = Environment(loader=FileSystemLoader("."))
 
 doc_test_str = "Test Results for " + combined_data[0][0] + " to " + combined_data[-1][0]
 
@@ -88,7 +86,9 @@ for data in combined_data:
         else:
             fail_reason.append("Unknown Cause")
 
+from jinja2 import Environment, FileSystemLoader
 
+env = Environment(loader=FileSystemLoader("."))
 rendered_template = env.get_template('report.html').render(date_range = doc_test_str, num_tests_run = num_tests_run, num_pass = num_pass, num_fail = num_fail, num_fail_temp = num_fail_temp, \
                                              num_fail_unknown = num_fail_unknown, temp_data = temp_data, pass_data = pass_data, fail_reason = fail_reason)
 

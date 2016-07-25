@@ -41,7 +41,8 @@ def combine_data():
 if __name__ == '__main__':
 
     combined_data, temperature_fail, unknown_fail  = combine_data()
+
+    print(combined_data[:2])
     print(temperature_fail)
-
-
     print(unknown_fail)
+
