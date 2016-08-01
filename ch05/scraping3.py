@@ -3,9 +3,6 @@
 import requests
 import bs4
 
-
-
-
 r = requests.get("http://pythonforengineers.com/secret/")
 
 soup = bs4.BeautifulSoup(r.text, "lxml")

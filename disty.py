@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/vagrant/miniconda3/bin/python
 from distributed import Executor
 import os
 rootdir = "/enron/lay-k"
