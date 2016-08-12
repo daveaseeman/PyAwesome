@@ -1,0 +1,121 @@
+cython:
+
+use filter_cython.pyx, not filter_cython4.cyx, as slow
+
+setup2.py & filter_cython2.py call it
+
+filter_cython.py is the untouched veriosn
+
+then numba_ex.py
+
+
+
+Other: $ dworker  192.168.33.10:8786  => Use ipaddress
+
+Then follow example on http://distributed.readthedocs.io/en/latest/quickstart.html
+
+ sudo apt-get update
+  sudo apt-get install python3-pip -y
+   sudo pip3 install distributed
+
+* Using C/C++ to speed up your code. A section on Numba, a just in time compiler that aims to speed up your code without having to use C/C++
+ 
+------------------------------- 
+Questions: will the section on automation include the ability to read variables from
+- the command when the script is launched?
+- a file that contains variables with their assigned values? useful when the Python script is the same for the devices but variables are different for each device...
+Can the Python script be made into a cron job? 
+
+
+read/wrote pdf files
+.I often work with PDF files and it is a manual search and replace ie. one at a time with me having to do the actual work. Word files can be done with open source or Windows software but PDF editing is scarce!
+Ok! That's the project for the pdf file.
+
+     Combining data from dozens of files (Excel, text, Csv), removing bad data , and optionally, graphing it.
+
+    Cleaning up a dozen source code files with one Python script (cleaning typos, replacing tabs with spaces etc). 
+
+    Automate system admin tasks (ssh into remote servers, get logs etc). 
+
+    Monitor web site/services for changes- like when the price on a website changes.
+
+    Use Python to run multiple command line programs, combine their results, and optionally, compare to yesterdays results.
+    
+1. £1400: Read/Write Ms Word/Pdf files. Even though this wasn't the most popular option, it is required for the option below. Achieved!  
+
+2. £1600: Automatic report generation. Given a set of log files (or related), automatically generate a proper word/pdf/html report, with proper headers and formatting. Achieved!
+
+3. £1800: Writing Bash scripts, including scripts that run at fixed times. Achieved!
+
+4. £1900: Monitor a file for changes, and run a script when it changes. This is related to option 2, which is why I've kept it close to 2's target. Achieved!
+
+5. £2200: Website automation, including logging into websites, and getting data hidden behind login pages, clicking on buttons etc. Achieved!
+
+6. £2500: Working with large folder structures, hundreds of files, including removing duplicate files. Achieved!
+
+7. £3000: Multiprocessing: Use all cores on the same machine. Achieved!
+
+8. £4000: Distributed processing: Use external servers to offload tasks, including, if possible, the Raspberry Pi.
+
+7. £6000: Using C/C++ to speed up your code. A section on Numba, a just in time compiler that aims to speed up your code without having to use C/C++ Achieved!    
+
+=========================
+
+
+Bash scripts
+
+1. Ssh into server, get logs
+
+2. replace a series of piped bash scripts with one python
+
+3. Multiple cmd line programs combine
+
+4. Quote hell
+
+5. Read commnd line variables, read from files etc
+
+=======
+One liners:
+
+https://github.com/stephenturner/oneliners
+Rename all .txt files to .bak (backup *.txt before doing something else to them, for example):
+
+find . -name "*.txt" | sed "s/\.txt$//" | xargs -i echo mv {}.txt {}.bak | sh
+
+=======
+
+replace bash: http://amoffat.github.io/sh/
+
+=======
+
+http://click.pocoo.org/5/
+
+=========
+
+DONE 1. Read from command line, read from config files, SYSTEM VARIABLES
+
+program that takes in 3 flags- connect to server. Server name (required), port number(optional), flag to signal if log mu st be saved.
+
+
+DONE 2. Why use python instead of bash (quote hell example).  Replace find example above
+
+DONE 2.1 shlex
+
+DONE 3. USe pythn to go thru hundreds of directories, files, remove duplicates, delete jpg files (when present)
+
+DONE?? 4. ssh example
+
+DONE 5. cron job example
+
+DONE 6. monitor file for changes. Docx, text file, or both?
+
+==> Use md5sum
+
+excel sheet where new products added. Every 5 minutes,script will check if file changed. If so, total all productsm and find average price. Also print number of products.
+
+DONE 7. Run program with 100% cpu. Use python to find which program running at 100% (top), then kill it with klall. 2 linux commans, combined. send message
+
+
+http://stackoverflow.com/questions/14457303/python-subprocess-and-user-interaction
+
+DONE 9. Not related, but clean up source code files in python.

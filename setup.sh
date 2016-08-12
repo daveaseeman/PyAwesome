@@ -11,6 +11,9 @@ cd /tmp
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh -b
+
+echo "PATH=/home/vagrant/miniconda3/bin:$PATH" >> ~/.bashrc
+
 ~/miniconda3/bin/pip install  pypdf2 thefuck    -y
 ~/miniconda3/bin/conda install cython  distributed numpy scipy numba paramiko pandas
 echo "cd /vagrant" >> /home/vagrant/.bashrc

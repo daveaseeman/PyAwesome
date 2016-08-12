@@ -266,8 +266,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__filter_cpython
-#define __PYX_HAVE_API__filter_cpython
+#define __PYX_HAVE__filter
+#define __PYX_HAVE_API__filter
 #include "math.h"
 #ifdef _OPENMP
 #include <omp.h>
@@ -484,7 +484,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "filter_cpython.pyx",
+  "filter.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -683,11 +683,11 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'filter_cpython' */
-#define __Pyx_MODULE_NAME "filter_cpython"
-int __pyx_module_is_main_filter_cpython = 0;
+/* Module declarations from 'filter' */
+#define __Pyx_MODULE_NAME "filter"
+int __pyx_module_is_main_filter = 0;
 
-/* Implementation of 'filter_cpython' */
+/* Implementation of 'filter' */
 static PyObject *__pyx_builtin_range;
 static const char __pyx_k_i[] = "i";
 static const char __pyx_k_j[] = "j";
@@ -704,13 +704,11 @@ static const char __pyx_k_coeffs[] = "coeffs";
 static const char __pyx_k_filter[] = "filter";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_local_sum[] = "local_sum";
-static const char __pyx_k_filter_cpython[] = "filter_cpython";
-static const char __pyx_k_vagrant_filter_cpython_pyx[] = "/vagrant/filter_cpython.pyx";
+static const char __pyx_k_vagrant_ch07_filter_pyx[] = "/vagrant/ch07/filter.pyx";
 static PyObject *__pyx_n_s_coeffs;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_n_s_filter;
-static PyObject *__pyx_n_s_filter_cpython;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_j;
@@ -722,8 +720,8 @@ static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_sum;
 static PyObject *__pyx_n_s_test;
-static PyObject *__pyx_kp_s_vagrant_filter_cpython_pyx;
-static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_kp_s_vagrant_ch07_filter_pyx;
+static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_float_0_1;
 static PyObject *__pyx_float_1_3;
 static PyObject *__pyx_float_2_2;
@@ -737,8 +735,8 @@ static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_codeobj__3;
 
-/* "filter_cpython.pyx":9
- *     float acosf(float theta)
+/* "filter.pyx":8
+ *     float cosf(float theta)
  * 
  * def filter():             # <<<<<<<<<<<<<<
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]
@@ -746,20 +744,20 @@ static PyObject *__pyx_codeobj__3;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_14filter_cpython_1filter(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_14filter_cpython_1filter = {"filter", (PyCFunction)__pyx_pw_14filter_cpython_1filter, METH_NOARGS, 0};
-static PyObject *__pyx_pw_14filter_cpython_1filter(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6filter_1filter(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_6filter_1filter = {"filter", (PyCFunction)__pyx_pw_6filter_1filter, METH_NOARGS, 0};
+static PyObject *__pyx_pw_6filter_1filter(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("filter (wrapper)", 0);
-  __pyx_r = __pyx_pf_14filter_cpython_filter(__pyx_self);
+  __pyx_r = __pyx_pf_6filter_filter(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_v_coeffs = NULL;
   PyObject *__pyx_v_sum = NULL;
   PyObject *__pyx_v_local_sum = NULL;
@@ -778,14 +776,14 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("filter", 0);
 
-  /* "filter_cpython.pyx":10
+  /* "filter.pyx":9
  * 
  * def filter():
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]             # <<<<<<<<<<<<<<
  * 
  *     sum = 0
  */
-  __pyx_t_1 = PyList_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_float_0_1);
   __Pyx_GIVEREF(__pyx_float_0_1);
@@ -811,7 +809,7 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
   __pyx_v_coeffs = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "filter_cpython.pyx":12
+  /* "filter.pyx":11
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]
  * 
  *     sum = 0             # <<<<<<<<<<<<<<
@@ -821,7 +819,7 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_sum = __pyx_int_0;
 
-  /* "filter_cpython.pyx":13
+  /* "filter.pyx":12
  * 
  *     sum = 0
  *     local_sum = 0             # <<<<<<<<<<<<<<
@@ -831,22 +829,22 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_local_sum = __pyx_int_0;
 
-  /* "filter_cpython.pyx":14
+  /* "filter.pyx":13
  *     sum = 0
  *     local_sum = 0
  *     for i in range(1000000):             # <<<<<<<<<<<<<<
  *         for j in range(len(coeffs)):
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_3 = 0;
     __pyx_t_4 = NULL;
   } else {
-    __pyx_t_3 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
+    __pyx_t_3 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 14, __pyx_L1_error)
+    __pyx_t_4 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 13, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -854,17 +852,17 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 14, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 13, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_COMPILING_IN_CPYTHON
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 14, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 13, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -874,7 +872,7 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 14, __pyx_L1_error)
+          else __PYX_ERR(0, 13, __pyx_L1_error)
         }
         break;
       }
@@ -883,66 +881,66 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "filter_cpython.pyx":15
+    /* "filter.pyx":14
  *     local_sum = 0
  *     for i in range(1000000):
  *         for j in range(len(coeffs)):             # <<<<<<<<<<<<<<
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
  *         sum += local_sum
  */
-    __pyx_t_5 = PyList_GET_SIZE(__pyx_v_coeffs); if (unlikely(__pyx_t_5 == -1)) __PYX_ERR(0, 15, __pyx_L1_error)
+    __pyx_t_5 = PyList_GET_SIZE(__pyx_v_coeffs); if (unlikely(__pyx_t_5 == -1)) __PYX_ERR(0, 14, __pyx_L1_error)
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_j = __pyx_t_6;
 
-      /* "filter_cpython.pyx":16
+      /* "filter.pyx":15
  *     for i in range(1000000):
  *         for j in range(len(coeffs)):
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))             # <<<<<<<<<<<<<<
  *         sum += local_sum
  *         local_sum = 0
  */
-      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyFloat_FromDouble(sinf(__pyx_t_7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(sinf(__pyx_t_7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_8 = PyNumber_Multiply(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_8 = PyNumber_Multiply(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyFloat_FromDouble(cosf(__pyx_t_7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(cosf(__pyx_t_7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = PyNumber_Multiply(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_9 = PyNumber_Multiply(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Add(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_9 = PyNumber_InPlaceAdd(__pyx_v_local_sum, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_9 = PyNumber_InPlaceAdd(__pyx_v_local_sum, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF_SET(__pyx_v_local_sum, __pyx_t_9);
       __pyx_t_9 = 0;
     }
 
-    /* "filter_cpython.pyx":17
+    /* "filter.pyx":16
  *         for j in range(len(coeffs)):
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
  *         sum += local_sum             # <<<<<<<<<<<<<<
  *         local_sum = 0
  *     print(sum)
  */
-    __pyx_t_9 = PyNumber_InPlaceAdd(__pyx_v_sum, __pyx_v_local_sum); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __pyx_t_9 = PyNumber_InPlaceAdd(__pyx_v_sum, __pyx_v_local_sum); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 16, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF_SET(__pyx_v_sum, __pyx_t_9);
     __pyx_t_9 = 0;
 
-    /* "filter_cpython.pyx":18
+    /* "filter.pyx":17
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
  *         sum += local_sum
  *         local_sum = 0             # <<<<<<<<<<<<<<
@@ -952,7 +950,7 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_DECREF_SET(__pyx_v_local_sum, __pyx_int_0);
 
-    /* "filter_cpython.pyx":14
+    /* "filter.pyx":13
  *     sum = 0
  *     local_sum = 0
  *     for i in range(1000000):             # <<<<<<<<<<<<<<
@@ -962,17 +960,17 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "filter_cpython.pyx":19
+  /* "filter.pyx":18
  *         sum += local_sum
  *         local_sum = 0
  *     print(sum)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  if (__Pyx_PrintOne(0, __pyx_v_sum) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_v_sum) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "filter_cpython.pyx":9
- *     float acosf(float theta)
+  /* "filter.pyx":8
+ *     float cosf(float theta)
  * 
  * def filter():             # <<<<<<<<<<<<<<
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]
@@ -987,7 +985,7 @@ static PyObject *__pyx_pf_14filter_cpython_filter(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("filter_cpython.filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("filter.filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_coeffs);
@@ -1010,7 +1008,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "filter_cpython",
+    "filter",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -1026,7 +1024,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
   {&__pyx_n_s_filter, __pyx_k_filter, sizeof(__pyx_k_filter), 0, 0, 1, 1},
-  {&__pyx_n_s_filter_cpython, __pyx_k_filter_cpython, sizeof(__pyx_k_filter_cpython), 0, 0, 1, 1},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_j, __pyx_k_j, sizeof(__pyx_k_j), 0, 0, 1, 1},
@@ -1038,11 +1035,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_sum, __pyx_k_sum, sizeof(__pyx_k_sum), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
-  {&__pyx_kp_s_vagrant_filter_cpython_pyx, __pyx_k_vagrant_filter_cpython_pyx, sizeof(__pyx_k_vagrant_filter_cpython_pyx), 0, 0, 1, 0},
+  {&__pyx_kp_s_vagrant_ch07_filter_pyx, __pyx_k_vagrant_ch07_filter_pyx, sizeof(__pyx_k_vagrant_ch07_filter_pyx), 0, 0, 1, 0},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 13, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -1052,28 +1049,28 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "filter_cpython.pyx":14
+  /* "filter.pyx":13
  *     sum = 0
  *     local_sum = 0
  *     for i in range(1000000):             # <<<<<<<<<<<<<<
  *         for j in range(len(coeffs)):
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_int_1000000); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_int_1000000); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "filter_cpython.pyx":9
- *     float acosf(float theta)
+  /* "filter.pyx":8
+ *     float cosf(float theta)
  * 
  * def filter():             # <<<<<<<<<<<<<<
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]
  * 
  */
-  __pyx_tuple__2 = PyTuple_Pack(5, __pyx_n_s_coeffs, __pyx_n_s_sum, __pyx_n_s_local_sum, __pyx_n_s_i, __pyx_n_s_j); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(5, __pyx_n_s_coeffs, __pyx_n_s_sum, __pyx_n_s_local_sum, __pyx_n_s_i, __pyx_n_s_j); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(0, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_vagrant_filter_cpython_pyx, __pyx_n_s_filter, 9, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(0, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_vagrant_ch07_filter_pyx, __pyx_n_s_filter, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1098,11 +1095,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initfilter_cpython(void); /*proto*/
-PyMODINIT_FUNC initfilter_cpython(void)
+PyMODINIT_FUNC initfilter(void); /*proto*/
+PyMODINIT_FUNC initfilter(void)
 #else
-PyMODINIT_FUNC PyInit_filter_cpython(void); /*proto*/
-PyMODINIT_FUNC PyInit_filter_cpython(void)
+PyMODINIT_FUNC PyInit_filter(void); /*proto*/
+PyMODINIT_FUNC PyInit_filter(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -1119,7 +1116,7 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_filter_cpython(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_filter(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -1148,7 +1145,7 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("filter_cpython", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("filter", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -1165,14 +1162,14 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_filter_cpython) {
+  if (__pyx_module_is_main_filter) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "filter_cpython")) {
-      if (unlikely(PyDict_SetItemString(modules, "filter_cpython", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "filter")) {
+      if (unlikely(PyDict_SetItemString(modules, "filter", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -1192,10 +1189,10 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "filter_cpython.pyx":2
+  /* "filter.pyx":2
  * #!/home/vagrant/miniconda3/bin/python
  * import math             # <<<<<<<<<<<<<<
- * #from Cython.Compiler.Options import directive_defaults
+ * 
  * cdef extern from "math.h":
  */
   __pyx_t_1 = __Pyx_Import(__pyx_n_s_math, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 2, __pyx_L1_error)
@@ -1203,36 +1200,36 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_math, __pyx_t_1) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "filter_cpython.pyx":9
- *     float acosf(float theta)
+  /* "filter.pyx":8
+ *     float cosf(float theta)
  * 
  * def filter():             # <<<<<<<<<<<<<<
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_14filter_cpython_1filter, NULL, __pyx_n_s_filter_cpython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6filter_1filter, NULL, __pyx_n_s_filter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_filter, __pyx_t_1) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_filter, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "filter_cpython.pyx":22
+  /* "filter.pyx":21
  * 
  * 
  * if __name__ == '__main__':             # <<<<<<<<<<<<<<
  *         filter()
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_main, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_main, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "filter_cpython.pyx":23
+    /* "filter.pyx":22
  * 
  * if __name__ == '__main__':
  *         filter()             # <<<<<<<<<<<<<<
  */
-    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_filter); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_filter); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -1245,16 +1242,16 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
       }
     }
     if (__pyx_t_4) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else {
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "filter_cpython.pyx":22
+    /* "filter.pyx":21
  * 
  * 
  * if __name__ == '__main__':             # <<<<<<<<<<<<<<
@@ -1262,10 +1259,10 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
  */
   }
 
-  /* "filter_cpython.pyx":1
+  /* "filter.pyx":1
  * #!/home/vagrant/miniconda3/bin/python             # <<<<<<<<<<<<<<
  * import math
- * #from Cython.Compiler.Options import directive_defaults
+ * 
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1281,11 +1278,11 @@ PyMODINIT_FUNC PyInit_filter_cpython(void)
   __Pyx_XDECREF(__pyx_t_4);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init filter_cpython", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init filter_cpython");
+    PyErr_SetString(PyExc_ImportError, "init filter");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

@@ -1,6 +1,10 @@
 #!/home/vagrant/miniconda3/bin/python
 import math
 
+from numba import jit
+
+
+@jit
 def filter():
     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]
 
@@ -15,4 +19,4 @@ def filter():
 
 
 if __name__ == '__main__':
-        filter()    
+        filter()

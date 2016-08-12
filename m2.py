@@ -3,18 +3,14 @@ import math
 import numpy as np
 from numba import jit
 
-@jit
-def mandelbrot(z , c , n=400):
-    
-    for i in range(n):
+@jit(cache=True, nopython=True)
+def in_mandelbrot_set(c, iterations=400, threshold=2):
+    z = 0
+    for _ in range(iterations):
         z = z * z + c
-    if abs(z) > 1000:
-        return float("nan")
-    else:
-        return z 
+    return abs(z) < threshold
 
-print("\n".join(["".join(["#" if not math.isnan(mandelbrot(0, x + 1j * y).real) else " "
-                 for x in [a * 0.02 for a in range(-80, 30)]]) 
-                 for y in [a * 0.05 for a in range(-20, 20)]])
-     )
- 
+
+
+for y in np.linspace(1j, -1j, 40):
+    print(*('#' if in_mandelbrot_set(x + y) else ' ' for x in np.linspace(-2, 0.5, 80)), sep='')

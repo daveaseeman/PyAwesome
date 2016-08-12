@@ -2,6 +2,6 @@ from distutils.core import setup
 from Cython.Build import cythonize
 
 setup(
-  name = 'a',
-  ext_modules = cythonize("a.pyx"),
+  name = 'Mandel',
+  ext_modules = cythonize("mandel.pyx"),
 )

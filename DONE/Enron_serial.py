@@ -4,11 +4,12 @@ import os
 import multiprocessing
 import time
 
-rootdir = "/enron/lay-k"
+rootdir = "../enron/maildir/lay-k"
 
 emails = []
 words = 0
 t0 = time.process_time()
+
 def word_count(inputfile):
     with open(inputfile, "r", encoding="latin-1") as f:
         data = f.read()
