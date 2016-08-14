@@ -1,9 +1,13 @@
 #!/home/vagrant/miniconda3/bin/python
+def mul(a,b):
+    c = 0
+    d = 0.0
+    for i in range(1000):
+        for j in range(50):
+            c+= a * b
 
-name = input("Name: ")
-age = input("Age: ")
+            d += a/b
 
+    return c,d
 
-code = name[:4] + age + "random"
-
-print("Your token is: ", code)
+print(mul(7, 2))
