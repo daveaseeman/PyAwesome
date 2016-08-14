@@ -10,7 +10,7 @@ then numba_ex.py
 
 
 
-Other: $ dworker  192.168.33.10:8786  => Use ipaddress
+Other: $ dworker  192.168.33.9:8786  => Use ipaddress
 
 Then follow example on http://distributed.readthedocs.io/en/latest/quickstart.html
 

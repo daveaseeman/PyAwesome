@@ -1,0 +1,19 @@
+Before you start, open *Vagrantfile*, and add this line:
+
+config.vm.synced_folder "../enron/maildir", "/enron"
+
+
+Then boot the machine with : vagrant up --provision.
+
+Then run these commands:
+
+1. cd /tmp
+
+2. wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+
+3. ./Miniconda3-latest-Linux-x86_64.sh -b
+
+4. echo "PATH=/home/vagrant/miniconda3/bin:$PATH" >> ~/.bashrc
+
+5. conda install distributed -y

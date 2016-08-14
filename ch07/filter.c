@@ -729,7 +729,6 @@ static PyObject *__pyx_float_3_4;
 static PyObject *__pyx_float_5_6;
 static PyObject *__pyx_float_9_8;
 static PyObject *__pyx_float_0_01;
-static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1000000;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
@@ -759,8 +758,8 @@ static PyObject *__pyx_pw_6filter_1filter(PyObject *__pyx_self, CYTHON_UNUSED Py
 
 static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_v_coeffs = NULL;
-  PyObject *__pyx_v_sum = NULL;
-  PyObject *__pyx_v_local_sum = NULL;
+  float __pyx_v_sum;
+  float __pyx_v_local_sum;
   PyObject *__pyx_v_i = NULL;
   Py_ssize_t __pyx_v_j;
   PyObject *__pyx_r = NULL;
@@ -771,9 +770,10 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *(*__pyx_t_4)(PyObject *);
   Py_ssize_t __pyx_t_5;
   Py_ssize_t __pyx_t_6;
-  float __pyx_t_7;
-  PyObject *__pyx_t_8 = NULL;
+  PyObject *__pyx_t_7 = NULL;
+  float __pyx_t_8;
   PyObject *__pyx_t_9 = NULL;
+  PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("filter", 0);
 
   /* "filter.pyx":9
@@ -781,7 +781,7 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
  * def filter():
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]             # <<<<<<<<<<<<<<
  * 
- *     sum = 0
+ *     cdef float sum = 0
  */
   __pyx_t_1 = PyList_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -812,26 +812,24 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
   /* "filter.pyx":11
  *     coeffs = [0.1, 1.3, 5.6, 3.4, 9.8, 0.01, 2.2]
  * 
- *     sum = 0             # <<<<<<<<<<<<<<
- *     local_sum = 0
+ *     cdef float sum = 0             # <<<<<<<<<<<<<<
+ *     cdef float local_sum = 0
  *     for i in range(1000000):
  */
-  __Pyx_INCREF(__pyx_int_0);
-  __pyx_v_sum = __pyx_int_0;
+  __pyx_v_sum = 0.0;
 
   /* "filter.pyx":12
  * 
- *     sum = 0
- *     local_sum = 0             # <<<<<<<<<<<<<<
+ *     cdef float sum = 0
+ *     cdef float local_sum = 0             # <<<<<<<<<<<<<<
  *     for i in range(1000000):
  *         for j in range(len(coeffs)):
  */
-  __Pyx_INCREF(__pyx_int_0);
-  __pyx_v_local_sum = __pyx_int_0;
+  __pyx_v_local_sum = 0.0;
 
   /* "filter.pyx":13
- *     sum = 0
- *     local_sum = 0
+ *     cdef float sum = 0
+ *     cdef float local_sum = 0
  *     for i in range(1000000):             # <<<<<<<<<<<<<<
  *         for j in range(len(coeffs)):
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
@@ -882,7 +880,7 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
     __pyx_t_1 = 0;
 
     /* "filter.pyx":14
- *     local_sum = 0
+ *     cdef float local_sum = 0
  *     for i in range(1000000):
  *         for j in range(len(coeffs)):             # <<<<<<<<<<<<<<
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
@@ -899,33 +897,37 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
  *         sum += local_sum
  *         local_sum = 0
  */
-      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_local_sum); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyFloat_FromDouble(sinf(__pyx_t_7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_8 = PyNumber_Multiply(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_8);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_1); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyFloat_FromDouble(cosf(__pyx_t_7)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = PyNumber_Multiply(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_8 = __pyx_PyFloat_AsFloat(__pyx_t_7); if (unlikely((__pyx_t_8 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __pyx_t_7 = PyFloat_FromDouble(sinf(__pyx_t_8)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_9 = PyNumber_Multiply(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 15, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_coeffs, __pyx_v_j, Py_ssize_t, 1, PyInt_FromSsize_t, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_8 = __pyx_PyFloat_AsFloat(__pyx_t_7); if (unlikely((__pyx_t_8 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __pyx_t_7 = PyFloat_FromDouble(cosf(__pyx_t_8)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_10 = PyNumber_Multiply(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __pyx_t_7 = PyNumber_Add(__pyx_t_9, __pyx_t_10); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_9 = PyNumber_InPlaceAdd(__pyx_v_local_sum, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 15, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_10 = PyNumber_InPlaceAdd(__pyx_t_1, __pyx_t_7); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_DECREF_SET(__pyx_v_local_sum, __pyx_t_9);
-      __pyx_t_9 = 0;
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __pyx_t_8 = __pyx_PyFloat_AsFloat(__pyx_t_10); if (unlikely((__pyx_t_8 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_v_local_sum = __pyx_t_8;
     }
 
     /* "filter.pyx":16
@@ -935,10 +937,7 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
  *         local_sum = 0
  *     print(sum)
  */
-    __pyx_t_9 = PyNumber_InPlaceAdd(__pyx_v_sum, __pyx_v_local_sum); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 16, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_9);
-    __Pyx_DECREF_SET(__pyx_v_sum, __pyx_t_9);
-    __pyx_t_9 = 0;
+    __pyx_v_sum = (__pyx_v_sum + __pyx_v_local_sum);
 
     /* "filter.pyx":17
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
@@ -947,12 +946,11 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
  *     print(sum)
  * 
  */
-    __Pyx_INCREF(__pyx_int_0);
-    __Pyx_DECREF_SET(__pyx_v_local_sum, __pyx_int_0);
+    __pyx_v_local_sum = 0.0;
 
     /* "filter.pyx":13
- *     sum = 0
- *     local_sum = 0
+ *     cdef float sum = 0
+ *     cdef float local_sum = 0
  *     for i in range(1000000):             # <<<<<<<<<<<<<<
  *         for j in range(len(coeffs)):
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
@@ -967,7 +965,10 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
  * 
  * 
  */
-  if (__Pyx_PrintOne(0, __pyx_v_sum) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_sum); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "filter.pyx":8
  *     float cosf(float theta)
@@ -983,14 +984,13 @@ static PyObject *__pyx_pf_6filter_filter(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_10);
   __Pyx_AddTraceback("filter.filter", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_coeffs);
-  __Pyx_XDECREF(__pyx_v_sum);
-  __Pyx_XDECREF(__pyx_v_local_sum);
   __Pyx_XDECREF(__pyx_v_i);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -1050,8 +1050,8 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
   /* "filter.pyx":13
- *     sum = 0
- *     local_sum = 0
+ *     cdef float sum = 0
+ *     cdef float local_sum = 0
  *     for i in range(1000000):             # <<<<<<<<<<<<<<
  *         for j in range(len(coeffs)):
  *             local_sum += (i * sinf(coeffs[j])) + (i * cosf(coeffs[j]))
@@ -1087,7 +1087,6 @@ static int __Pyx_InitGlobals(void) {
   __pyx_float_5_6 = PyFloat_FromDouble(5.6); if (unlikely(!__pyx_float_5_6)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_float_9_8 = PyFloat_FromDouble(9.8); if (unlikely(!__pyx_float_9_8)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_float_0_01 = PyFloat_FromDouble(0.01); if (unlikely(!__pyx_float_0_01)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1000000 = PyInt_FromLong(1000000L); if (unlikely(!__pyx_int_1000000)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
