@@ -13,8 +13,7 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh -b
 
 echo "PATH=/home/vagrant/miniconda3/bin:$PATH" >> ~/.bashrc
-
+cd /vagrant
 /home/vagrant/miniconda3/bin/conda install --file requirements.txt -y
 /home/vagrant/miniconda3/bin/pip install -r pip_req.txt
 echo "cd /vagrant" >> /home/vagrant/.bashrc
-cd /vagrant

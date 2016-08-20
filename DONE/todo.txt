@@ -1,8 +1,0 @@
-
-clikc on web app
-
-
-parallel and districuted
-
-
-cython and numba
