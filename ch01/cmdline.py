@@ -15,9 +15,10 @@ cmd = "ssh_mine " + args.servername
 if args.flag:
     cmd += " --save_session"
 
-cmd += " -p " 
-for port in args.ports:
-    cmd +=  port + " "
+if args.ports:
+    cmd += " -p " 
+    for port in args.ports:
+        cmd +=  port + " "
 
 print(cmd)
 
