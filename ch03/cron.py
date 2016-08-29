@@ -1,20 +1,23 @@
 #!/home/vagrant/miniconda3/bin/python
 from subprocess import Popen, PIPE
 
-
 def update_values():
     with open("prices.csv", "r") as f:
         data = f.read()
         data = data.split("\n")
 
+        # Remove the header field
         data2 = data[1:]
         num_items = len(data2)
 
         total = 0
 
         for item in data2:
-            price = int(item.split(",")[1])
-            total += price
+
+            # Check for empty values
+            if item:
+                price = int(item.split(",")[1])
+                total += price
 
         average_price = total / num_items
 
